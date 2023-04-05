@@ -4,14 +4,15 @@ export default {
 
     name: 'AppComments',
 
+
+
     emits: ['delete'],
 
     props: {
 
         comment: String,
         index: Number
-    },
-
+    }
 
 
 }
@@ -19,7 +20,7 @@ export default {
 </script>
 
 <template>
-    <div class="card rounded-4 mb-3" style="width: 18rem;">
+    <div class="card rounded-4 mb-3">
         <div class="card-body rounded-4 border-danger-subtle">
             <h5 class="card-title">Commento {{ index + 1 }}</h5>
             <p class="card-text">{{ comment }}</p>
