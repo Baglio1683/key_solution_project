@@ -12,14 +12,17 @@ export default {
 
             text: " ",
 
+
         }
 
     },
+
     emits: ['submit'],
 
     methods: {
         cleanText() {
             this.text = "";
+
         }
     }
 }

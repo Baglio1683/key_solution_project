@@ -18,9 +18,20 @@ export default {
     AppHeader
   },
   methods: {
+
+
     addcomments(text) {
       this.comments.push(text);
+    },
+
+
+    deleteElement(index) {
+
+      this.comments.slice(index, 1);
+
     }
+
+
   },
 }
 
@@ -31,13 +42,12 @@ export default {
   <main>
     <AppInput @submit="addcomments"></AppInput>
     <div class="container mt-5">
-      <div class="row justify-content-center ">
+      <div class="row justify-content-center">
+        <hr>
         <div class="col-6">
-          <ul>
-            <h2>Lista Commenti: </h2>
-            <AppComments v-for="comment in comments" :comment="comment">
-            </AppComments>
-          </ul>
+          <h2 class="mb-4">Lista Commenti: </h2>
+          <AppComments v-for="(comment, index) in comments" :comment="comment" :index="index" @delete="deleteElement">
+          </AppComments>
         </div>
       </div>
     </div>
@@ -45,13 +55,11 @@ export default {
 </template>
 
 
-<style>
-
-main{
+<style lang="scss">
+main {
   background-color: #ed5b27;
   color: white;
   min-height: 85vh;
 
 }
-
 </style>
