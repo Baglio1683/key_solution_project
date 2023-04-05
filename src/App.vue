@@ -27,7 +27,7 @@ export default {
 
     deleteElement(index) {
 
-      this.comments.slice(index, 1);
+      this.comments.splice(index, 1);
 
     }
 

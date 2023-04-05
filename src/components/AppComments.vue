@@ -9,10 +9,10 @@ export default {
     emits: ['delete'],
 
     props: {
-
         comment: String,
-        index: Number
+        index : Number
     }
+
 
 
 }
